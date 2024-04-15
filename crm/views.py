@@ -38,6 +38,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            success: True(user) # type: ignore
             login(request, user)
             messages.success(request, "You Registered...")
             return redirect('/')  # Adjust the redirect as necessary
@@ -58,6 +59,7 @@ def add_customer(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
+            success: True
             return redirect('/')  # Redirect to your customers' list view
     else:
         form = CustomerForm()

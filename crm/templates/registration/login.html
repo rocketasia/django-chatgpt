@@ -9,9 +9,10 @@
 </head>
 <body> <div class="container"> 
     <h2>Login</h2>
+  
     {% load crispy_forms_tags %}
 
-    <form method="post">
+    <form method="post" onsubmit="return confirm('Welcome');">
         {% csrf_token %}
         {{ form|crispy }}
         <button class="btn btn-success rounded" type="submit">Login&nbsp;&nbsp;<span class="fa-solid fa-user"></span></button>
@@ -20,7 +21,9 @@
 
     {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
+        
     {% endif %}
+    
 
     <p>Don't have an account? &nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'signup' %}" class="btn btn-secondary rounded">Sign up&nbsp;&nbsp;<span class="fa-solid fa-pen"></span></a></p></div>
 </body>
