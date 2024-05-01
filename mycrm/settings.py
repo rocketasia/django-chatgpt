@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crm',
-    "crispy_forms",
+    # "crispy_forms",
     "crispy_bootstrap4",'fontawesomefree',
     #  'uni_form',
    
