@@ -60,7 +60,7 @@ def add_customer(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "You add a customer with success...")
+            messages.success(request, "New Customer Added Successfully...")
             return redirect('/')  # Redirect to your customers' list view
     else:
         form = CustomerForm()
