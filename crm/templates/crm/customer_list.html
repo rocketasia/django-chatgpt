@@ -28,7 +28,11 @@
   
   <div class="card bg-light ms-4 me-4 mb-4">
     <div class="card-header"><br>
-      <i class="fa-solid fa-list fa-lg"></i> Customer Records
+      <i class="fa-solid fa-list fa-lg"></i> Customer Records{% if messages %}
+    
+      {% for message in messages %}
+     {{ message }}</li>
+      {% endfor %}{% endif %}
     </div>
 
         <div class="table-responsive">
