@@ -17,7 +17,7 @@ def customer_list(request):
 def delete_customer(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     customer.delete()
-    messages.success(request, "You deleted a record...")
+    messages.success(request, "You Registered...")
     return redirect('/')  # Redirect to a page that lists customers, adjust as necessary
 
 
