@@ -28,7 +28,7 @@ def edit_customer(request, pk):
         form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():
             form.save()
-            messages.success(request, "You edited...")
+            messages.success(request, "You successfully edited your record...")
             return redirect('/')  # Redirect to the customer list or detail view
     else:
         form = CustomerForm(instance=customer)
@@ -41,7 +41,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "You Registered...")
+            messages.success(request, "You Registered With Success...")
             return redirect('/')  # Adjust the redirect as necessary
             
     else:
@@ -60,7 +60,7 @@ def add_customer(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "You add a customer...")
+            messages.success(request, "You add a customer with success...")
             return redirect('/')  # Redirect to your customers' list view
     else:
         form = CustomerForm()
