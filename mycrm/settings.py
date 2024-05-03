@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'https://crm.onemedia.asia',]
 
+CSRF_TRUSTED_ORIGINS = ['https://crm.onemedia.asia']
+
 
 # Application definition
 
