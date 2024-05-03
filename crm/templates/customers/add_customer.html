@@ -8,7 +8,12 @@
    
     <!-- Include Bootstrap CSS or other styling here if needed -->
 </head>
-<body> <div class="container" > <br><br><br>
+<body>{% if messages %}
+    
+    {% for message in messages %}
+   {{ message }}</li>
+    {% endfor %}{% endif %}
+     <div class="container" > <br><br><br>
   
     {% load crispy_forms_tags %}
 

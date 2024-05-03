@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    {% if success %}
-    <div class="alert alert-success" role="alert">
-       test
-
-       {% endif%}
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}{% endif %}
     </div>
    <div class="container" width="50px">
       

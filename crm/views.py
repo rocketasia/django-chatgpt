@@ -17,6 +17,7 @@ def customer_list(request):
 def delete_customer(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     customer.delete()
+    messages.success(request, "You Registered...")
     return redirect('/')  # Redirect to a page that lists customers, adjust as necessary
 
 
@@ -27,6 +28,7 @@ def edit_customer(request, pk):
         form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():
             form.save()
+            messages.success(request, "You edited...")
             return redirect('/')  # Redirect to the customer list or detail view
     else:
         form = CustomerForm(instance=customer)
@@ -38,7 +40,6 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            success: True(user) # type: ignore
             login(request, user)
             messages.success(request, "You Registered...")
             return redirect('/')  # Adjust the redirect as necessary
@@ -59,7 +60,7 @@ def add_customer(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            success: True
+            messages.success(request, "You add a customer...")
             return redirect('/')  # Redirect to your customers' list view
     else:
         form = CustomerForm()
