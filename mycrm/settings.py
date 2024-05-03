@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5bku$2&o_o0(_zkpa-qvy25rix4^k8t70#)uwwmf-v#a#tqwi2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'crm.onemedia.asia']
 
 
 # Application definition
