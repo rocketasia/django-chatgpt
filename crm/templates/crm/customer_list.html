@@ -29,17 +29,16 @@
 <body>
   
   <div class="card bg-light ms-4 me-4 mb-4">
-    <div class="card-header"><br>
-      <i class="fa-solid fa-list fa-lg"></i> Customer Records{% if messages %}
-    
-      {% for message in messages %}
-<br><br>  
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        {{ message }}
-       
-      </div>
-    
-      {% endfor %}{% endif %}
+    <div class="card-header">
+      <i class="fa-solid fa-list fa-lg"></i> Customer Records
+      {% if messages %}<br>
+      <ul class="messages">
+          {% for message in messages %}
+          <br><br>  <p class="alert alert-{{ message.tags }}">{{ message }}</p>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      
     </div>
 
         <div class="table-responsive">
