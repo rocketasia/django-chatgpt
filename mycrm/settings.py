@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'mycrm.wsgi.application'
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'crm/db.sqlite3',
 #     }
-# }
+# }kjhjkh
 
 DATABASES = {
     'default': {
