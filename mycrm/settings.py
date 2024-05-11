@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'mycrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database-2',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': ',,,,,,,,',
         'HOST': 'database-2.c3ggwoscgyki.us-east-1.rds.amazonaws.com',
